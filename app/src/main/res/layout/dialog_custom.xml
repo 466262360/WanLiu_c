@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_dialog_bg_white">
+    <ImageView
+        android:id="@+id/iv_bg"
+        android:src="@drawable/dialog_exit"
+        android:layout_width="315dp"
+        android:layout_height="165dp"/>
+    <TextView
+        android:id="@+id/btn_cancel"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:text="@string/cancel"
+        android:gravity="center"
+        android:textColor="@color/colorExit"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toStartOf="@+id/line"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_bg" />
+
+    <TextView
+        android:id="@+id/btn_confirm"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:text="@string/exit"
+        android:textColor="@color/base1"
+        android:gravity="center"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/line"
+        app:layout_constraintTop_toBottomOf="@+id/iv_bg" />
+
+
+    <TextView
+        android:id="@+id/tv_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:text="@string/exit_message"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:layout_marginBottom="46dp"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_bg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <View
+        android:id="@+id/line"
+        app:layout_constraintStart_toEndOf="@+id/btn_cancel"
+        app:layout_constraintEnd_toStartOf="@+id/btn_confirm"
+        android:background="@color/dialogLine"
+        app:layout_constraintTop_toTopOf="@+id/btn_cancel"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_cancel"
+        android:layout_width="0.5dp"
+        android:layout_height="21dp"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

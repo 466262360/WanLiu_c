@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView
+        android:id="@+id/iv_top_bg"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/mine_top_1" />
+    <include
+        android:id="@+id/title"
+        layout="@layout/toolbar_layout" />
+
+    <ImageView
+        android:id="@+id/iv_none"
+        android:layout_width="53dp"
+        android:layout_height="144dp"
+        android:layout_marginTop="90dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/code_result_none"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_top_bg" />
+
+    <ImageView
+        android:id="@+id/iv_fail_1"
+        android:layout_width="0dp"
+        android:layout_height="400dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/code_result_fail"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title" />
+
+    <ImageView
+        android:id="@+id/iv_fail_2"
+        android:layout_width="160dp"
+        android:layout_height="190dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/shape_member_fail_bg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/iv_fail_1" />
+
+    <ImageView
+        android:id="@+id/iv_fail_3"
+        android:layout_width="67dp"
+        android:layout_height="90dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/code_result_fail_2"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_fail_2"
+        app:layout_constraintEnd_toEndOf="@+id/iv_fail_2"
+        app:layout_constraintStart_toStartOf="@+id/iv_fail_2"
+        app:layout_constraintTop_toTopOf="@+id/iv_fail_2" />
+
+    <TextView
+        android:id="@+id/tv_none"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:text="@string/code_result_2"
+        android:textColor="@color/black4"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_none" />
+
+    <TextView
+        android:id="@+id/tv_fail_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/code_result_4"
+        android:textColor="@color/black2"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_fail_2" />
+    <TextView
+        android:id="@+id/tv_fail_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:gravity="center"
+        android:lineSpacingExtra="12dp"
+        android:text="@string/code_result_5"
+        android:textColor="@color/black2"
+        android:textSize="17sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/v_fail_1" />
+    <View
+        android:id="@+id/v_fail_1"
+        style="@style/Line"
+        android:layout_width="0dp"
+        android:layout_marginEnd="42dp"
+        android:layout_marginStart="42dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="@+id/iv_fail_1"
+        app:layout_constraintStart_toStartOf="@+id/iv_fail_1"
+        app:layout_constraintTop_toBottomOf="@+id/tv_fail_1" />
+    <Button
+        android:id="@+id/btn_back"
+        style="@style/ButtonGray"
+        android:layout_marginBottom="20dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginStart="30dp"
+        android:text="@string/code_result_3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/group_none"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="iv_none,tv_none" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/group_fail"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="iv_fail_1,iv_fail_2,iv_fail_3,v_fail_1,tv_fail_1,tv_fail_2" />
+</androidx.constraintlayout.widget.ConstraintLayout>

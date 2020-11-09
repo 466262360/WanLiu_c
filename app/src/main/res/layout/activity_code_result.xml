@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/base3">
+
+    <Button
+        android:id="@+id/btn_back"
+        style="@style/ButtonGray"
+        android:layout_marginBottom="20dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginStart="30dp"
+        android:text="@string/code_result_3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btn_check"
+        style="@style/ButtonRed"
+        android:layout_marginBottom="20dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginStart="30dp"
+        android:text="@string/code_result_10"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/iv_top_bg"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/mine_top_1" />
+
+
+    <ImageView
+        android:id="@+id/iv_success_1"
+        android:layout_width="0dp"
+        android:layout_height="400dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/member_success_bg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title" />
+
+    <ImageView
+        android:id="@+id/iv_success_2"
+        android:layout_width="160dp"
+        android:layout_height="190dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/shape_icon_frame"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/iv_success_1" />
+
+    <ImageView
+        android:id="@+id/iv_icon"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="4dp"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_success_2"
+        app:layout_constraintEnd_toEndOf="@+id/iv_success_2"
+        app:layout_constraintStart_toStartOf="@+id/iv_success_2"
+        app:layout_constraintTop_toTopOf="@+id/iv_success_2" />
+
+    <ImageView
+        android:id="@+id/iv_list_1"
+        android:layout_width="13dp"
+        android:layout_height="13dp"
+        android:layout_marginStart="15dp"
+        android:src="@drawable/mine_call"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_list_1"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <TextView
+        android:id="@+id/tv_success_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/code_result_4"
+        android:textColor="@color/black2"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_success_2" />
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="15dp"
+        android:text="@string/code_result_6"
+        android:textColor="@color/black2"
+        android:textSize="17sp"
+        app:layout_constraintStart_toStartOf="@+id/v_success_1"
+        app:layout_constraintTop_toBottomOf="@+id/v_success_1" />
+
+    <TextView
+        android:id="@+id/tv_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/code_result_7"
+        android:textColor="@color/black2"
+        android:textSize="17sp"
+        app:layout_constraintStart_toStartOf="@+id/v_success_1"
+        app:layout_constraintTop_toBottomOf="@+id/tv_name" />
+
+    <TextView
+        android:id="@+id/tv_card"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/code_result_8"
+        android:textColor="@color/black2"
+        android:textSize="17sp"
+        app:layout_constraintStart_toStartOf="@+id/v_success_1"
+        app:layout_constraintTop_toBottomOf="@+id/tv_id" />
+
+    <TextView
+        android:id="@+id/tv_no_order"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/code_result_9"
+        android:textColor="@color/white1"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/btn_back"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_success_1" />
+
+    <TextView
+        android:id="@+id/tv_list_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/code_result_11"
+        android:textColor="@color/black3"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/iv_list_1"
+        app:layout_constraintTop_toBottomOf="@+id/iv_success_1" />
+
+
+    <View
+        android:id="@+id/v_success_1"
+        style="@style/Line"
+        android:layout_width="0dp"
+        android:layout_marginEnd="42dp"
+        android:layout_marginStart="42dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="@+id/iv_success_1"
+        app:layout_constraintStart_toStartOf="@+id/iv_success_1"
+        app:layout_constraintTop_toBottomOf="@+id/tv_success_1" />
+
+    <View
+        android:id="@+id/v_list_1"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/line2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_list_1" />
+
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/group_success"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="iv_icon,iv_success_1,iv_success_2,tv_success_1,v_success_1,tv_name,tv_id,tv_card" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/group_no_order"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="tv_no_order,btn_back" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/group_list"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="btn_check,iv_list_1,tv_list_1,v_list_1,rv_list" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_list"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_check"
+        app:layout_constraintTop_toBottomOf="@+id/v_list_1" />
+
+    <include
+        android:id="@+id/title"
+        layout="@layout/toolbar_layout" />
+</androidx.constraintlayout.widget.ConstraintLayout>

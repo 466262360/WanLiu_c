@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/iv_pic"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="@+id/rv_consume"
+        app:layout_constraintStart_toStartOf="@+id/rv_consume"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title" />
+
+
+    <ImageView
+        android:id="@+id/iv_icon_1"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginStart="10dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/mine_call"
+        app:layout_constraintBottom_toBottomOf="@+id/rg"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/iv_list_bg"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/mainBg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/line_2" />
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="220dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/main_bg"
+        android:scaleType="centerInside"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintDimensionRatio="1:1.3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/line_2" />
+
+
+    <ImageView
+        android:id="@+id/iv_icon_2"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginStart="10dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/mine_call"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_1"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="76dp"
+        android:background="@drawable/main_bottom"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_scan"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:src="@drawable/main_scan"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_home"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginBottom="2dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/main_home"
+        app:layout_constraintBottom_toTopOf="@+id/tv_home"
+        app:layout_constraintEnd_toStartOf="@+id/iv_scan"
+        app:layout_constraintStart_toStartOf="parent" />
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/cl_mine"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp"
+    android:paddingBottom="6dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toEndOf="@+id/iv_scan"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/iv_mine"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/main_mine"
+       />
+    <TextView
+        android:id="@+id/tv_mine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/main_8"
+        android:textColor="@color/black"
+        android:textSize="11sp"
+        android:layout_marginTop="2dp"
+        app:layout_constraintTop_toBottomOf="@+id/iv_mine"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <RadioGroup
+        android:id="@+id/rg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_pic">
+
+        <com.mashangyou.wanliu.widget.MyRadioButton
+            android:id="@+id/rb_week"
+            android:layout_width="35dp"
+            android:layout_height="wrap_content"
+            android:button="@null"
+            app:text="@string/main_4"
+            app:text_size="12sp"
+            app:text_size_sel="15sp"
+            app:text_color="@color/white1"
+            app:text_color_sel="@color/black3"
+            app:bg_color="@color/yellow"
+            android:checked="true"
+            android:layout_marginEnd="10dp"
+             />
+
+        <com.mashangyou.wanliu.widget.MyRadioButton
+            android:id="@+id/rb_month"
+            android:layout_width="35dp"
+            android:layout_height="wrap_content"
+            android:button="@null"
+            app:text="@string/main_5"
+            app:text_size="12sp"
+            app:text_size_sel="15sp"
+            app:text_color="@color/white1"
+            app:text_color_sel="@color/black3"
+            app:bg_color="@color/yellow"
+            android:layout_marginEnd="10dp"
+             />
+
+        <com.mashangyou.wanliu.widget.MyRadioButton
+            android:id="@+id/rb_year"
+            android:layout_width="35dp"
+            android:layout_height="wrap_content"
+            android:button="@null"
+            app:text="@string/main_6"
+            app:text_size="12sp"
+            app:text_size_sel="15sp"
+            app:text_color="@color/white1"
+            app:text_color_sel="@color/black3"
+            app:bg_color="@color/yellow" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="27dp"
+        android:layout_marginTop="50dp"
+        android:text="@string/main_7"
+        android:textColor="@color/black3"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:text="@string/main_1"
+        android:textColor="@color/black3"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/rg"
+        app:layout_constraintStart_toEndOf="@+id/iv_icon_1" />
+
+    <TextView
+        android:id="@+id/tv_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/main_3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/iv_list_bg" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:text="@string/main_2"
+        android:textColor="@color/black3"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_1"
+        app:layout_constraintStart_toEndOf="@+id/iv_icon_1" />
+
+    <TextView
+        android:id="@+id/tv_home"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="6dp"
+        android:text="@string/main_7"
+        android:textColor="@color/black"
+        android:textSize="11sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/iv_scan"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+
+    <View
+        android:id="@+id/line_1"
+        style="@style/Line2"
+        android:layout_marginEnd="17dp"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/rg" />
+
+    <View
+        android:id="@+id/line_2"
+        style="@style/Line2"
+        android:layout_marginEnd="17dp"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/rv_consume" />
+
+    <View
+        android:id="@+id/line_3"
+        style="@style/Line2"
+        android:layout_marginEnd="17dp"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/tv_1" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_consume"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/line_1" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_record"
+        android:layout_width="match_parent"
+        app:layout_constraintBottom_toTopOf="@+id/iv_bottom"
+        android:layout_height="0dp"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        app:layout_constraintTop_toBottomOf="@+id/line_3" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="black2">#3C302D</color>
+    <color name="black3">#333333</color>
+    <color name="black4">#3C302D</color>
+    <color name="black5">#666666</color>
+    <color name="white1">#999999</color>
+    <color name="base1">#4CA9B7</color>
+    <color name="base2">#65D1A1</color>
+    <color name="base3">#FEFEFE</color>
+    <color name="blue">#0270FF</color>
+    <color name="text1">#7C634C</color>
+    <color name="gray">#F1F1F1</color>
+    <color name="gray2">#F3F3F6</color>
+    <color name="colorExit">#99000000</color>
+    <color name="dialogLine">#99999999</color>
+    <color name="input">#4D333333</color>
+    <color name="line">#EEE0C8</color>
+    <color name="line2">#ADADAD</color>
+    <color name="frame">#FEFBEE</color>
+    <color name="btnStart">#F96F68</color>
+    <color name="btnEnd">#F09189</color>
+    <color name="grayStart">#898989</color>
+    <color name="grayEnd">#9A9A9A</color>
+    <color name="mainBg">#7AEDEFEC</color>
+    <color name="yellow">#FFDB55</color>
+
+</resources>
