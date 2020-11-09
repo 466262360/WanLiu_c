@@ -162,13 +162,15 @@ public class CodeResultActivity extends BaseActivity {
     private void sendPrint() {
 
         HashMap<String, String> hashMap = new HashMap<>();
-        hashMap.put(Contant.PRINT_NAME,userInfo.getName());
-        hashMap.put(Contant.PRINT_ID,userInfo.getTcode());
-        hashMap.put(Contant.PRINT_MEMBER_NAME,userInfo.getMemberName());
-        hashMap.put(Contant.PRINT_DATE,getDate(currentOrders.getPlayTime()));
-        hashMap.put(Contant.PRINT_PEOPLE,currentOrders.getPeoples());
-        hashMap.put(Contant.PRINT_CAVES,currentOrders.getCaves());
-        hashMap.put(Contant.PRINT_ORDER,currentOrders.getOrderId());
+        hashMap.put(Contant.PRINT_NAME, userInfo.getName());
+        hashMap.put(Contant.PRINT_ID, userInfo.getTcode());
+        hashMap.put(Contant.PRINT_MEMBER_NAME, userInfo.getMemberName());
+        hashMap.put(Contant.PRINT_DATE, getDate(currentOrders.getPlayTime()));
+        hashMap.put(Contant.PRINT_PEOPLE, currentOrders.getPeoples());
+        hashMap.put(Contant.PRINT_CAVES, currentOrders.getCaves());
+        hashMap.put(Contant.PRINT_ORDER, currentOrders.getOrderId());
+        hashMap.put(Contant.PRINT_GOLFNAME, currentOrders.getGolfName());
+        hashMap.put(Contant.PRINT_FREQUENCY, currentOrders.getFrequency());
         hashMap.put(Contant.PRINT_CURRENT_DATE, TimeUtils.getNowString(format));
         SerializableMap map = new SerializableMap();
         map.setMap(hashMap);

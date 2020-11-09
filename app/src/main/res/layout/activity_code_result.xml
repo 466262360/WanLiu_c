@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/base3">
+    android:background="@color/base4">
 
     <Button
         android:id="@+id/btn_back"
@@ -31,6 +31,9 @@
 
     <ImageView
         android:id="@+id/iv_top_bg"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         android:layout_width="match_parent"
         android:layout_height="180dp"
         android:scaleType="centerCrop"
@@ -204,7 +207,6 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginBottom="10dp"
-        android:layout_marginTop="10dp"
         app:layout_constraintBottom_toTopOf="@+id/btn_check"
         app:layout_constraintTop_toBottomOf="@+id/v_list_1" />
 

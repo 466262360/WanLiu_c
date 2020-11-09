@@ -9,6 +9,7 @@ import android.content.ServiceConnection;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.IBinder;
+import android.os.Looper;
 import android.os.Message;
 import android.os.RemoteException;
 import android.os.SystemClock;
@@ -48,6 +49,7 @@ import com.mashangyou.wanliu.bean.res.VerifyRes;
 import com.mashangyou.wanliu.socket.ClientHeartBeat;
 import com.mashangyou.wanliu.util.MessageCenter;
 import com.mashangyou.wanliu.util.MessageType;
+import com.mashangyou.wanliu.util.PrintContract;
 import com.mashangyou.wanliu.util.SerializableMap;
 import com.smartdevice.aidl.IZKCService;
 
@@ -161,8 +163,8 @@ public class MainActivity extends BaseActivity {
                 .load(R.drawable.main_pic)
                 .transform(new CenterCrop(), new RoundedCorners(ConvertUtils.dp2px(11)))
                 .into(ivPic);
-        EasySocket.getInstance().subscribeSocketAction(socketActionListener);
-        startHeartbeat();
+        //EasySocket.getInstance().subscribeSocketAction(socketActionListener);
+        //startHeartbeat();
         bindPrintService();
         // mServiceIntent = new Intent(this, WsService.class);
     }
@@ -271,10 +273,41 @@ public class MainActivity extends BaseActivity {
                 Bundle bundle = intent.getBundleExtra(Contant.PRINT_MAP);
                 SerializableMap map = (SerializableMap) bundle.get(Contant.PRINT_MAP);
                 Map<String, String> printMap = map != null ? map.getMap() : null;
-                print(printMap);
+                new PrintThread(printMap).start();
             }
         }
     };
+
+    private class PrintThread extends Thread {
+        Map<String, String> printMap;
+
+        public PrintThread(Map<String, String> map) {
+            printMap = map;
+        }
+
+        public void run() {
+            try {
+                if (printMap == null) {
+                    ToastUtils.showLong("无打印内容");
+                    return;
+                }
+                if (mIzkcService==null||!mIzkcService.checkPrinterAvailable()) {
+                    ToastUtils.showLong("打印机不可用");
+                    return;
+                }
+                String printerStatus = mIzkcService.getPrinterStatus();
+                LogUtils.d(printerStatus);
+                if ("缺纸".equals(printerStatus)) {
+                    ToastUtils.showLong("打印机缺纸");
+                    return;
+                }
+                mIzkcService.printUnicodeText(PrintContract.createXxTxt(printMap));
+            } catch (RemoteException e) {
+                ToastUtils.showShort("打印服务未连接...");
+                e.printStackTrace();
+            }
+        }
+    }
 
     private void print(Map<String, String> printMap) {
 
@@ -330,9 +363,12 @@ public class MainActivity extends BaseActivity {
     }
 
     private void verify(String code) {
+        String[] split = code.split(",");
         showLoading();
         HashMap<String, String> hashMap = new HashMap<>();
-        hashMap.put("brcode", code);
+        hashMap.put("barcode", split[0]);
+        hashMap.put("brcodeo", split[1]);
+        hashMap.put("brcodet", split[2]);
         hashMap.put("token", SPUtils.getInstance().getString(Contant.ACCESS_TOKEN));
         RetrofitManager.getApi()
                 .verify(hashMap)

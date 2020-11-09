@@ -17,7 +17,7 @@ public class MyApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
-        initEasySocket();
+        //initEasySocket();
     }
 
     private void initEasySocket() {

@@ -20,5 +20,7 @@ public class Contant {
     public static final String PRINT_PEOPLE ="print_people" ;
     public static final String PRINT_CAVES ="print_caves" ;
     public static final String PRINT_ORDER ="print_order" ;
+    public static final String PRINT_GOLFNAME ="print_golf_name" ;
+    public static final String PRINT_FREQUENCY ="print_frequency" ;
     public static final String PRINT_CURRENT_DATE ="print_current_date" ;
 }

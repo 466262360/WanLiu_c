@@ -25,7 +25,7 @@ public interface Api {
     Observable<ResponseBody<PassWordRes>> passWord(@FieldMap Map<String, String> fields);
 
     @FormUrlEncoded
-    @POST("mobile/verification")
+    @POST("mobile/multiple/verification")
     Observable<ResponseBody<VerifyRes>> verify(@FieldMap Map<String, String> fields);
 
     @FormUrlEncoded

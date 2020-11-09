@@ -68,7 +68,25 @@ public class VerifyRes extends ResponseBody implements Serializable {
         private String orderId;
         private String peoples;
         private String playTime;
+        private String golfName;
+        private String frequency="0";
         private boolean sel;
+
+        public String getGolfName() {
+            return golfName;
+        }
+
+        public void setGolfName(String golfName) {
+            this.golfName = golfName;
+        }
+
+        public String getFrequency() {
+            return frequency;
+        }
+
+        public void setFrequency(String frequency) {
+            this.frequency = frequency;
+        }
 
         public boolean isSel() {
             return sel;
